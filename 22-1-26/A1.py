@@ -4,7 +4,7 @@ import numpy as np
 # Load data
 data = pd.read_excel("data/data.xlsx", sheet_name="Purchase data")
 features = data[["Candies (#)","Mangoes (Kg)","Milk Packets (#)"]].values
-payment = data["Payment (Rs)"].values.reshape(-1,1)
+payment = data["Payment (Rs)"].values.reshape(-1,1) # type: ignore
 
 # Calculate rank
 matrix_rank = np.linalg.matrix_rank(features)
