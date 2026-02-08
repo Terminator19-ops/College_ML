@@ -4,8 +4,8 @@ from sklearn.datasets import load_iris
 
 
 iris = load_iris()
-X = iris.data[iris.target != 2]
-y = iris.target[iris.target != 2]
+X = iris.data[iris.target != 2] # type: ignore
+y = iris.target[iris.target != 2] # type: ignore
 
 feature = X[:, 0]
 

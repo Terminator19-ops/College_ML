@@ -15,8 +15,8 @@ def std_dev(data):
     return var**0.5
 
 iris = load_iris()
-X = iris.data[iris.target != 2]
-y = iris.target[iris.target != 2]
+X = iris.data[iris.target != 2] # type: ignore
+y = iris.target[iris.target != 2] # type: ignore
 
 class0 = X[y == 0]
 class1 = X[y == 1]

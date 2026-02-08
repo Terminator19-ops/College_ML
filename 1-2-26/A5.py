@@ -10,8 +10,8 @@ def minkowski_distance(A, B, p):
     return total**(1/p)
 
 iris = load_iris()
-X = iris.data[iris.target != 2]
-y = iris.target[iris.target != 2]
+X = iris.data[iris.target != 2] # type: ignore
+y = iris.target[iris.target != 2] # type: ignore
 
 A = X[0]
 B = X[1]

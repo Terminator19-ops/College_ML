@@ -4,8 +4,8 @@ from sklearn.model_selection import train_test_split
 
 
 iris = load_iris()
-X = iris.data[iris.target != 2]
-y = iris.target[iris.target != 2]
+X = iris.data[iris.target != 2] # type: ignore
+y = iris.target[iris.target != 2] # type: ignore
 
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=42
